@@ -20,7 +20,16 @@ public class UnitSelectionHandler : MonoBehaviour
 
     private void Update()
     {
-        if(Mouse.current.leftButton.wasReleasedThisFrame)
+        if(Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            foreach(Unit selectedUnit in selectedUnits)
+            {
+                selectedUnit.Deselect();
+            }
+
+            selectedUnits.Clear();
+        }
+        else if(Mouse.current.leftButton.wasReleasedThisFrame)
         {
             ClearSelectionArea();
         }
