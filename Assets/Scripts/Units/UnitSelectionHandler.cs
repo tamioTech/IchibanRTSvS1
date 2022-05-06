@@ -31,5 +31,16 @@ public class UnitSelectionHandler : MonoBehaviour
         Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
 
         if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask)){ return;}
+
+        if(!hit.collider.TryGetComponent<Unit>(out Unit unit)) { return; }
+
+        if (!unit.hasAuthority) { return; }
+
+        selectedUnits.Add(unit);
+
+        foreach(Unit selectedUnit in selectedUnits)
+        {
+            selectedUnit.Select();
+        }
     }
 }

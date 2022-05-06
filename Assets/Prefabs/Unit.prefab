@@ -39,7 +39,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600016804547588962}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -335,6 +335,7 @@ GameObject:
   - component: {fileID: 6339282920668146757}
   - component: {fileID: 4925319705221285290}
   - component: {fileID: -2708578676890638034}
+  - component: {fileID: 7872666893153306956}
   m_Layer: 0
   m_Name: Unit
   m_TagString: Untagged
@@ -494,6 +495,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+--- !u!65 &7872666893153306956
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3987053400208201208}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.178805, y: 1, z: 1.1937059}
+  m_Center: {x: 0.000000059604645, y: 0.5, z: 0.02235061}
 --- !u!1001 &3987053400070045470
 PrefabInstance:
   m_ObjectHideFlags: 0
